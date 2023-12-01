@@ -1,0 +1,38 @@
+// Lab 4
+const nums1 = [1, -2, 3, 4];
+const nums2 = [8, 3, -8, 1];
+
+const mergedArray = [...nums1, ...nums2];
+const finalArray = [5, ...nums1, -6, -1, ...nums2];
+const sum = finalArray.reduce((acc, curr) => acc + curr, 0);
+
+console.log(finalArray);
+console.log(sum); // = 8
+
+
+// Lab 6
+function Person() {
+    const name = prompt("Enter name:");
+    const lastName = prompt("Enter last name:");
+    const hobbiesInput = prompt("Enter hobbies (comma-separated):");
+    const hobbies = hobbiesInput.split(',').map(hobby => hobby.trim());
+  
+    return {
+      name,
+      lastName,
+      hobbies,
+      numOfHobbies: hobbies.length
+    };
+  }
+  
+  const person = Person();
+  console.log(person);
+
+// Lab 10
+function cloneObject(obj) {
+    return { ...obj };
+  }
+  const originalObject = { key1: 'abc', key2: 'def', key3: 'ghij' };
+  const clonedObject = cloneObject(originalObject);
+  console.log(clonedObject);
+  
